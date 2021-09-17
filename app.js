@@ -26,7 +26,20 @@ switch (comando) {
     case 'actualizar':
 
         let actualizado = porHacer.actualizar(argv.descripcion, argv.completado);
-        console.log(actualizado);
+        if (actualizado)
+            console.log(`Tarea ${argv.descripcion} actualizada correctamente`);
+        else
+            console.log('No se pudo actualizar la tarea: ', argv.descripcion);
+        break;
+
+
+    case 'borrar':
+
+        let borrado = porHacer.borrar(argv.descripcion);
+        if (borrado)
+            console.log(`Tarea ${argv.descripcion} borrada correctamente`);
+        else
+            console.log('No se pudo borrar la tarea: ', argv.descripcion);
         break;
 
     default:
