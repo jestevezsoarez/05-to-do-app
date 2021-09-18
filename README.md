@@ -5,4 +5,5 @@ Para instalar luego de descargar el repositorio
 
 ```
 npm install
+
 ```
